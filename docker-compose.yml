@@ -30,5 +30,10 @@ services:
         }'
     stdin_open: true
     tty: true
+  frontend:
+    image: mersanirania/crudtuto-frontend:1.0.0
+    restart: on-failure
+    ports:
+      - 4200:4200
 volumes:
   db :
